@@ -1,0 +1,13 @@
+0bc607b521eb47672d2b74bcae046552 *DESCRIPTION
+48480ce76999f888a229f51cfc0f674e *LICENSE
+a3deb71acfe41db9aadd08e941324dd1 *NAMESPACE
+2c8fb84b13b8b8151bdaf4c93c108dce *R/cmocean.R
+8796179bf15f487ff449f87d3596310f *R/sysdata.rda
+f9501ff4715d198977647f256619db75 *build/partial.rdb
+48c3774832458f9809db0a4ef6667a24 *build/vignette.rds
+6653a44f85e3b298fe17e95018697fec *inst/doc/cmocean.R
+f5ab528ac6a6fa1c66e2a50d828e7194 *inst/doc/cmocean.Rmd
+2ee76975cba1848e1032110059fe04d8 *inst/doc/cmocean.html
+9312ce7587aeb2f4093b538ef803f8d2 *man/cmocean-package.Rd
+d4fa39b0efb7f0a835402322afd5ba5f *man/cmocean.Rd
+f5ab528ac6a6fa1c66e2a50d828e7194 *vignettes/cmocean.Rmd
