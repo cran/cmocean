@@ -8,7 +8,8 @@ paramter.
 \usage{
 cmocean(
   name, version = getOption("cmocean-version", "2.0"),
-  clip = 0, start = clip/2, end = 1 - clip/2
+  clip = 0, start = clip/2, end = 1 - clip/2,
+  direction = 1, alpha = 1
 )
 }
 \arguments{
@@ -19,7 +20,8 @@ cmocean(
 
   \item{version}{
     specific \code{cmocean} version you would like to use; one of:
-\code{"0.03" "0.1" "0.2" "0.2.1" "0.2.2" "0.3" "1.0" "1.1" "1.2" "2.0"}.
+    \code{"0.03"} \code{"0.1"} \code{"0.2"} \code{"0.2.1"} \code{"0.2.2"}
+    \code{"0.3"} \code{"1.0"} \code{"1.1"} \code{"1.2"} \code{"2.0"}.
     Alternatively, you can use \code{options(`cmocean-version` = "...")}
     to set the desired version as a global option. Explicitly
     set argument overrides the global option; the global option
@@ -28,13 +30,28 @@ cmocean(
   }
 
   \item{clip}{
-    fraction of the colormap to clip (divided equally among both
-    sides).
+    fraction of the colormap to clip as a number between 0 and 1
+    (divided equally among both sides).
   }
 
-  \item{start}{fraction of the colormap to clip from its start.}
+  \item{start}{
+    fraction of the colormap to clip from its start (overrides
+    \code{clip}).
+  }
 
-  \item{end}{fraction of the colormap to clip from its end.}
+  \item{end}{
+    fraction of the colormap where it should stop, in \eqn{[0, 1]}
+    (overrides \code{clip};
+    \eqn{\mathtt{start} < \mathtt{end}}{start < end}.)
+  }
+
+  \item{direction}{
+    set to \code{-1} to reverse the palette.
+  }
+
+  \item{alpha}{
+    opacity of the palette in the range \eqn{[0, 1]}.
+  }
 }
 \details{
   Names of available palettes depend on the version you would
@@ -178,18 +195,17 @@ cmocean(
   }
 }
 \value{
-  A function taking an integer and returns a character vector
+  A function taking an integer and returning a character vector
   with \code{'#RRGGBB'} colours. Currently, it does not make
   sense to request more than 256 of them.
 }
 \examples{
-  z <- xtabs(weight~Time+Chick, ChickWeight)
-  x <- sort(as.numeric(rownames(z)))
-  y <- sort(as.numeric(colnames(z)))
-  image(
-    x = x, y = y, z = z, col = cmocean('delta')(100),
-    xlab = 'Time', ylab = 'Chick'
-  )
+  image(volcano, col = cmocean('thermal')(100))
+  image(volcano, col = cmocean('Temperature', '0.03')(128))
+  image(volcano, col = cmocean('thermal', clip = .2)(256))
+  image(volcano, col = cmocean('thermal', start = .1, end = .7)(256))
+  image(volcano, col = cmocean('thermal', direction = -1)(256))
+  image(volcano, col = cmocean('thermal', alpha = .5)(256))
 }
 \keyword{ color }
 % vi:ts=2:et
