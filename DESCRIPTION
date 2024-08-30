@@ -1,13 +1,12 @@
 Package: cmocean
 Encoding: UTF-8
-Version: 0.3-1
-Date: 2020-11-18
+Version: 0.3-2
 Title: Beautiful Colour Maps for Oceanography
-Authors@R: c(person('Kristen', 'Thyng', email = 'kthyng@gmail.com', role = 'aut'), person('Clark', 'Richards', email = 'clark.richards@gmail.com', role = 'ctb'), person('Ilja', 'Kocken', email = 'iljakocken <at> gmail.com', role = 'ctb'), person('Ivan', 'Krylov', email = 'krylov.r00t@gmail.com', role = 'cre'))
+Authors@R: c(person('Kristen', 'Thyng', email = 'kthyng@gmail.com', role = 'aut', comment = c(ORCID = '0000-0002-8746-614X')), person('Clark', 'Richards', email = 'clark.richards@gmail.com', role = 'ctb', comment = c(ORCID = '0000-0002-7833-206X')), person('Ilja', 'Kocken', role = 'ctb', comment = c(ORCID = '0000-0003-2196-8718')), person('Ivan', 'Krylov', email = 'ikrylov@disroot.org', role = 'cre', comment = c('ORCID' = '0000-0002-0172-3812')))
 Imports: grDevices
-Depends: R (>= 3.0.0)
-Suggests: knitr, rmarkdown, ggplot2
-LazyData: no
+Depends: R (>= 3.1.0)
+Suggests: knitr, rmarkdown
+Enhances: ggplot2
 Description: Perceptually uniform palettes for commonly used
 	variables in oceanography as functions taking an integer
 	and producing character vectors of colours.
@@ -16,14 +15,14 @@ Description: Perceptually uniform palettes for commonly used
 	the guidelines adhered to when creating the palettes.
 License: MIT + file LICENSE
 URL: https://matplotlib.org/cmocean/
-BugReports: https://github.com/aitap/cmocean
-VignetteBuilder: knitr
+BugReports: https://github.com/aitap/cmocean/issues
+VignetteBuilder: knitr, rmarkdown
 NeedsCompilation: no
-Packaged: 2020-11-18 13:55:30 UTC; ivan
-Author: Kristen Thyng [aut],
-  Clark Richards [ctb],
-  Ilja Kocken [ctb],
-  Ivan Krylov [cre]
-Maintainer: Ivan Krylov <krylov.r00t@gmail.com>
+Packaged: 2024-08-30 12:13:42 UTC; ivan
+Author: Kristen Thyng [aut] (<https://orcid.org/0000-0002-8746-614X>),
+  Clark Richards [ctb] (<https://orcid.org/0000-0002-7833-206X>),
+  Ilja Kocken [ctb] (<https://orcid.org/0000-0003-2196-8718>),
+  Ivan Krylov [cre] (<https://orcid.org/0000-0002-0172-3812>)
+Maintainer: Ivan Krylov <ikrylov@disroot.org>
 Repository: CRAN
-Date/Publication: 2020-11-18 21:10:09 UTC
+Date/Publication: 2024-08-30 13:10:06 UTC
